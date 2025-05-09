@@ -75,3 +75,15 @@ window.addEventListener('DOMContentLoaded', () => {
   calculateDays();
   calculateCosts();
 });
+window.addEventListener('DOMContentLoaded', () => {
+  calculateDays();
+  calculateCosts();
+
+  // Gắn listener trực tiếp vào các input ngày
+  const dateInputs = document.querySelectorAll('input[type="date"]');
+  dateInputs.forEach(input => {
+    input.addEventListener('change', () => {
+      calculateDays();
+    });
+  });
+});
